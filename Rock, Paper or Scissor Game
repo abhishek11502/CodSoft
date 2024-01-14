@@ -1,0 +1,52 @@
+#Rock beats scissor, scissor beat paper, and paper beats rock.
+
+import random
+
+game=["rock","paper","scissor"]
+
+while(True):
+    user=str(input("Choose b/w rock, paper or scissor:"))
+    if(user=='rock' or user=='paper' or user=='scissor'):
+        computer=random.sample(game,1)
+        print("computer:",computer)
+
+        if(user=='rock'):
+            if(computer==['scissor']):
+                print("winner:user")
+
+            elif(computer==['paper']):
+                print("winner:computer")
+
+            else:
+                print("winner:Draw")
+
+        elif(user=='paper'):
+            if(computer==['scissor']):
+                print("winner:computer")
+
+            elif(computer==['rock']):
+                print("winner:user")
+
+            else:
+                print("winner:Draw")
+
+        elif(user=='scissor'):
+            if(computer==['paper']):
+                print("winner:user")
+
+            elif(computer==['rock']):
+                print("winner:computer")
+
+            else:
+                print("winner:Draw")
+
+    else:
+        print("Invalid Input")
+        continue
+
+    ans=str(input("Want to play more(Yes/No):"))
+    if(ans=='no'):
+        break
+
+
+
